@@ -1,32 +1,124 @@
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.calculator {
+  border-radius: 10px;
+  display: grid;
+  height: 90%;
+  width: 60%;
+  grid-template-columns: 35% 13% 13% 13% 13%;
+  grid-template-rows: 18% 18% 18% 18% 18%;
+  grid-gap: 3px;
+  grid-template-areas:
+    "display clear divide multiply subtract"
+    "list seven eight nine add"
+    "list four five six add"
+    "list one two three equals"
+    "list zero zero decimal equals";
+  align-content: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.calculator .button {
+  border-radius: 40%;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#display {
+  grid-area: display;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+#displayOperations {
+  grid-area: list;
+  margin-right: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+#equals {
+  grid-area: equals;
+}
+#add {
+  grid-area: add;
+}
+#subtract {
+  grid-area: subtract;
+}
+#multiply {
+  grid-area: multiply;
+}
+#divide {
+  grid-area: divide;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+#clear {
+  grid-area: clear;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#one {
+  grid-area: one;
+}
+#two {
+  grid-area: two;
+}
+#three {
+  grid-area: three;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+#six {
+  grid-area: six;
+}
+#seven {
+  grid-area: seven;
+}
+#eight {
+  grid-area: eight;
+}
+#nine {
+  grid-area: nine;
+}
+
+@media (max-width: 800px) {
+  .calculator {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 600px) {
+  .calculator {
+    width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .calculator {
+    width: 100%;
+    height: 100%;
   }
 }

@@ -1,3 +1,11 @@
+## calculator-react
+
+This project was created for front-end libraries certification program on https://freecodecamp.org/.
+
+It is simple calculator that can perform presented list of calculations.
+
+Used technologies are just React.js and bootstrap css.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
