@@ -250,6 +250,8 @@ class Calculator extends Component {
       case "*":
         this.buttonPressed(1, "operation");
         break;
+      default:
+        break;
     }
   };
 
